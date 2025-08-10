@@ -1,0 +1,1062 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #334155;
+}
+
+.font-size-30px {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #334155;
+}
+
+.font-size-14px {
+    font-size: 14px;
+}
+
+.red {
+    color: #EB002B;
+}
+
+/* -------------------------------- Header Section CSS Start ------------------------------------------------------*/
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#white {
+    background-color: #FFFFFF
+}
+
+.header {
+    padding: 18px 60px;
+}
+
+/* Header row */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    justify-content: space-between;
+    /* gap: 27px; */
+}
+
+/* Header logo */
+.header-logo img {
+    width: 132px;
+    height: 22px;
+}
+
+/* Header search */
+.header-search {
+    width: 314px;
+    height: 42px;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 30px;
+    border-radius: 7px;
+}
+
+.search-icon {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-icon::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border: 2px solid #CBD5E1;
+    border-radius: 50%;
+}
+
+.search-icon::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 8px;
+    border-bottom: 2px solid #CBD5E1;
+    transform: rotate(60deg);
+    top: 10px;
+    left: 8px;
+}
+
+.header-input {
+    all: unset;
+    color: #CBD5E1;
+    width: 205px;
+    height: 21px;
+}
+
+/* Nav row */
+.nav-row {
+    max-width: 569px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-row ul {
+    padding-left: 20px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-row li {
+    position: relative;
+}
+
+.nav-row ul a {
+    text-decoration: none;
+    color: #334155;
+
+}
+
+.expend-option::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 5px;
+    top: 0;
+    bottom: 2;
+    margin: auto;
+    border-right: 2px solid #334155;
+    border-bottom: 2px solid #334155;
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+.expend-option:hover::after {
+    transform: rotate(220deg);
+}
+
+
+/* Nav Expend more */
+.expend-option ul {
+    display: none;
+    position: absolute;
+}
+
+.expend-data li {
+    /* top: 13px; */
+    width: 207px;
+    background-color: azure;
+    border-bottom: 2px solid #CBD5E1;
+    z-index: 99;
+    padding: 8px 15px;
+}
+
+.expend-data li:hover {
+    background-color: #EB002B;
+}
+
+.expend-option:hover ul {
+    display: block;
+}
+
+/* location icon */
+.header-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    all: unset;
+}
+
+.location-parent {
+    height: 16px;
+    width: 16px;
+    border: 2px solid #334155;
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.location-circle {
+    height: 4px;
+    width: 4px;
+    border: 1px solid #334155;
+    background-color: #334155;
+    border-radius: 50%;
+}
+
+.expend_more {
+    height: 7px;
+    width: 7px;
+    border-right: 2px solid #334155;
+    border-bottom: 2px solid #334155;
+    transform: rotate(45deg);
+    top: 0;
+    bottom: 2;
+    margin-bottom: 6px;
+}
+
+/* Notification */
+.header-notification {
+    position: relative;
+}
+
+.header-notification img {
+    height: 23px;
+    width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.notification-count {
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: auto;
+    padding: 5px;
+    background-color: red;
+    border-radius: 9px;
+    top: -25px;
+    left: 11px;
+    bottom: 0;
+    margin: auto;
+    color: #F8FAFC;
+}
+
+/* header favorite */
+.heart {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: red;
+    transform: rotate(-45deg);
+    margin: 22px;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -7px;
+    left: 0;
+}
+
+.heart::after {
+    left: 7px;
+    top: 0;
+}
+
+/* header button */
+.header-button button {
+    width: 88px;
+    height: 32px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.button {
+    all: unset;
+    background-color: #EB002B;
+    border: 1px solid #EB002B;
+    color: #F8FAFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: Poppins; */
+}
+
+.button:hover {
+    background-color: #fff;
+    color: red;
+    transform: scale(1.05);
+    transition: background-color 0.8s ease;
+}
+
+/* --------------------------------------------- Header Section CSS End ------------------------------------------------------------- */
+
+
+/* --------------------------------------------- Hero Section CSS Start ------------------------------------------------------------- */
+/* hero section  */
+.herosection {
+    position: relative;
+}
+
+.tabs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs label {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 1px solid red;
+}
+
+.tabs label:hover {
+    background: #333;
+    color: #fff;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    width: 100%;
+
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    max-width: 100%;
+    height: 540px;
+
+}
+
+
+input#tab1:checked~.slides #slide1,
+input#tab2:checked~.slides #slide2,
+input#tab3:checked~.slides #slide3 {
+    display: block;
+}
+
+input#tab1:checked~.tabs label[for="tab1"],
+input#tab2:checked~.tabs label[for="tab2"],
+input#tab3:checked~.tabs label[for="tab3"] {
+    background: #333;
+    color: #fff;
+}
+
+/* Hero Text */
+
+.hero-text {
+    position: absolute;
+    top: 263px;
+    left: 60px;
+    color: #F8FAFC;
+    max-width: 344px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text span {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.hero-text strong {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.hero-text button {
+    width: 136;
+    height: 39;
+    border-radius: 6px;
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    margin-top: 20px;
+}
+
+/* --------------------------------------------- Hero Section CSS End ------------------------------------------------------------- */
+
+/* --------------------------------------------- Advance Section CSS Start ------------------------------------------------------------- */
+/* Advance Search */
+
+.advance-option {
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advance-search {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1020px;
+    min-height: 105px;
+    border: 1px solid #E2E8F0;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.advance-child {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    position: relative;
+}
+
+.advance-child select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #E2E8F0;
+    padding-left: 15px;
+}
+
+.advance-expend {
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    margin: auto;
+    left: 85%;
+}
+
+.advance-search button {
+    height: 44px;
+    width: 100px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* advance icon css */
+
+.advance-icon {
+    min-width: 485px;
+    min-height: 166px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 6%;
+}
+
+.advance-icon-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 485px;
+    min-height: 121px;
+}
+
+.advance-icon-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.advance-icon-child img {
+    height: 50px;
+    width: 50px;
+}
+
+/* --------------------------------------------- Advance Section CSS End ------------------------------------------------------------- */
+
+/* --------------------------------------------- Most Searched Cars Section CSS Start ------------------------------------------------- */
+/* Car Most Searched Section */
+.car-searched {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #F8F8F8;
+}
+
+.google-add img {
+    width: 800px;
+    height: 90px;
+}
+
+.circle {
+    position: relative;
+}
+
+.circle-slide::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #edf3f9;
+    top: 0;
+    bottom: 0;
+    right: -80px;
+    margin: auto;
+}
+
+.circle-slide::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #edf3f9;
+    top: 0;
+    bottom: 0;
+    left: -80px;
+    margin: auto;
+}
+
+.car-searched-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    position: relative;
+}
+
+.car-searched-parent h2 {
+    margin-top: 20px;
+}
+
+.vehicle-model {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 25px;
+}
+
+.vehicle-model .border-bottom {
+    border-bottom: 1px solid #EB002B;
+}
+
+.searched-car-slide {
+    padding: 10px;
+    max-width: 980px;
+}
+
+.click-tabs {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-bottom: solid red;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.click-tabs.active {
+    background-color: #eb002b;
+    color: white;
+}
+
+.show-hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    column-gap: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.car-searched-parent::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-right: 3px solid #334155;
+    border-bottom: 3px solid #334155;
+    transform: rotate(-45deg);
+    top: 0;
+    bottom: 0;
+    right: -50px;
+    margin: auto;
+}
+
+.car-searched-parent::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-right: 3px solid #334155;
+    border-bottom: 3px solid #334155;
+    transform: rotate(135deg);
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    margin: auto;
+    z-index: 88;
+}
+
+.show::-webkit-scrollbar {
+    display: none;
+}
+
+.searched-car-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    position: relative;
+}
+
+.searched-car-child strong::after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    right: 0;
+    background-image: url(images/favorite.png);
+    background-size: cover;
+}
+
+.searched-car-child img {
+    width: 235px;
+    height: 190px;
+    border-radius: 6px;
+}
+
+.searched-car-child .view-offer {
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid red;
+    background-color: #FFFFFF;
+    color: red;
+    font-family: Poppins;
+}
+
+.view-all {
+    width: 226px;
+    border-radius: 7px;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #001B72;
+    font-family: Poppins;
+    position: relative;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: #001B72;
+}
+
+.view-all a::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-top: 2px solid #001B72;
+    border-right: 2px solid #001B72;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 6px;
+    transform: rotate(45deg);
+}
+
+.car-india {
+    margin-top: 30px;
+}
+
+.electric-car {
+    margin-top: 30px;
+}
+
+/* --------------------------------------------- Most Searched Cars Section CSS End ------------------------------------------------- */
+
+/* --------------------------------------------- Comparison Cars Section CSS Start ------------------------------------------------- */
+
+/* Comparison Car Section */
+
+.car-comparison-parent {
+    margin-top: 50px;
+}
+
+.comparison-car-slide {
+    width: 980px;
+    height: 350px;
+    display: flex;
+    column-gap: 20px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.comparison-car-slide::-webkit-scrollbar {
+    display: none;
+}
+
+.car-comparison {
+    width: 300px;
+    height: 350px;
+    position: relative;
+}
+
+.comparison-child {
+    width: 150px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    column-gap: 0px;
+    line-height: 20px;
+}
+
+.car-comparison img {
+    width: 150px;
+    height: 190px;
+    border-top-left-radius: 6px;
+
+}
+
+.car-comparison .add-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+}
+
+.car-comparison .add-image img {
+    height: 80px;
+    width: 80px;
+}
+
+.car-comparison .verses {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #EB002B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+    left: 115px;
+    font-weight: lighter;
+}
+
+.comparison-button {
+    width: 260PX;
+    height: 32PX;
+    border-width: 1px solid red;
+    border-radius: 6px;
+    padding: 5px 20px;
+    color: #EB002B;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    font-family: Poppins;
+}
+
+/* --------------------------------------------- Comparison Cars Section CSS End ------------------------------------------------- */
+
+/* --------------------------------------------- Search by Brand Section CSS Start ------------------------------------------------- */
+/* Search by Brand Section*/
+.search-brand {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.brand-icon-parent {
+    max-width: 860px;
+    height: 220px;
+    border-width: 1px solid #333;
+}
+
+.brand-icon-child {
+    width: 130px;
+    margin: 6px;
+    height: 100px;
+    border-width: 1px solid #333;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px 0px #E2E8F099;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.brand-icon-child .view-brand {
+    background-color: #FFFFFF;
+    border: none;
+    color: red;
+}
+
+.brand-icon-child img {
+    width: 79.38px;
+    height: 45px;
+}
+
+.float-left {
+    float: left;
+}
+
+/* --------------------------------------------- Search by Brand Section CSS End ------------------------------------------------- */
+
+
+/* -------------------------------------------- Latest Auto News Section Start --------------------------------------------------- */
+.latest-auto-news {
+    border: 1px solid rgb(210, 207, 207);
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #F8FAFC;
+}
+
+.bold {
+    font-weight: 550;
+}
+
+.latest-auto-news span {
+    text-align: justify;
+}
+
+/* -------------------------------------------- Latest Auto News Section End ----------------------------------------------------- */
+/* -------------------------------------------- about AutoXP Section Start ------------------------------------------------------- */
+
+.aboutxp-parent {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutxp-child {
+    width: 80%;
+    height: 60%;
+    text-align: justify;
+    line-height: 25px
+}
+
+.aboutxp-child h2,
+.aboutxp-child a {
+    font-weight: 500;
+    color: #334155;
+}
+
+.aboutxp-child .read-more {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.aboutxp-child img {
+    height: 20px;
+    width: 20px;
+}
+
+.upperarrow-parent {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -1050px;
+}
+
+.upperarrow-child {
+    height: 2px;
+    width: 14px;
+    background-color: #F8FAFC;
+    position: relative;
+    transform: rotate(-90deg);
+
+}
+
+.upperarrow-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 7px;
+    width: 7px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+}
+
+/* ------------------------------------- Web Stories Section Start ------------------------------------------ */
+.searched-car-slide{
+    display: flex;
+    column-gap: 10px;
+    overflow-x: auto;
+}
+.searched-car-slide::-webkit-scrollbar{
+    display: none;
+}
+.web-stories img {
+    height: 400px;
+}
+
+/* ------------------------------------- Web Stories Section End ----------------------------------------------- */
+
+/* --------------------------------------------- Footer Section CSS Start ------------------------------------------------- */
+/* Footer start */
+.footer {
+    height: 400px;
+    background: #0F172A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .footer-parent {
+    display: flex;
+    width: 1150px;
+    height: 367px;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.footer .footer-data {
+    display: flex;
+    flex-direction: column;
+    color: #E2E8F0;
+    line-height: 30px;
+}
+
+.footer .footer-icon {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.footer-child .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    height: 15px;
+}
+
+.footer-child ul {
+    list-style: none;
+}
+
+.footer-child h3 {
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #E2E8F0;
+    margin-bottom: 10px;
+}
+
+.footer-child li a {
+    text-decoration: none;
+    color: #94A3B8;
+}
+
+.text-color {
+    color: #94A3B8;
+}
+
+.footer-child li {
+    padding: 10px 0px;
+}
+
+.footer-icon .footer-child {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon .footer-child img {
+    width: 12px;
+    height: 15px;
+}
+
+.footer .copyright {
+    background: #0B101E;
+    width: 100%;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* --------------------------------------------- Footer Section CSS End ------------------------------------------------- */
