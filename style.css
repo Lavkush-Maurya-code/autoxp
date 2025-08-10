@@ -42,6 +42,7 @@ body {
 
 .header {
     padding: 18px 60px;
+    background-color: red;
 }
 
 /* Header row */
